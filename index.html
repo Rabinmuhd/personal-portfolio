@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Designer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+    <nav class="nav-links-desktop">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sidebar for mobile -->
+  <div id="sidebar" class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Hi! I'm</h2>
+      <h1>MUHAMMED RABIN P T</h1>
+      <h2>
+  <span style="color: #e50914;">Data Scientist |</span>  
+  <span style="color: #e50914;">Web designer</span>
+</h2>
+
+      
+      <a href="profile.html"><button>Know More</button></a>
+
+    </div>
+    <div class="hero-image">
+      <img src="profile.jpg" alt="Designer Photo" />
+    </div>
+  </section>
+
+  <script>
+    function toggleSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  sidebar.classList.toggle("active");}
+  </script>
+</body>
+</html>

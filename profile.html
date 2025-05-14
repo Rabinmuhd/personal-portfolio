@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-logo"></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+  <div class="sidebar" id="sidebar">
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <section class="about-section">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="profile.jpg" alt="Your Photo" width="100" height="200" />
+      </div>
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>I am <span class="highlight">Muhammed Rabin P T</span>, a tech enthusiast passionate about turning data into insights and ideas into intuitive digital experiences. 
+          With hands-on experience in AI, app development, and responsive UI design, I specialize in blending data science fundamentals with creative front-end solutions. 
+          Whether it’s building an AI-powered nutrition app or crafting sleek web interfaces, I aim to deliver impactful, user-focused results.
+           I'm now looking to collaborate, learn, and grow in the data science and tech development space.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-section">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>NUTRISCAN</h3>
+        <p>AI-Powered Food Recognition & Nutrition Tracking App using Flutter, Clarifai and Edamam APIs.</p>
+      </div>
+      <div class="project-card">
+        <h3>NEST DEMO WEBSITE</h3>
+        <p>Developed with responsive layouts and accessibility features.</p>
+      </div>
+      <div class="project-card">
+        <h3>COMMERCIAL WEBSITE</h3>
+        <p>Showcases front-end and project development skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-section">
+    <h2>Skills</h2>
+    <div class="progress-bars">
+      <div class="bar"><label>HTML</label><div class="progress"><div style="width: 90%"></div></div></div>
+      <div class="bar"><label>CSS</label><div class="progress"><div style="width: 80%"></div></div></div>
+      <div class="bar"><label>JavaScript</label><div class="progress"><div style="width: 70%"></div></div></div>
+      <div class="bar"><label>AI</label><div class="progress"><div style="width: 60%"></div></div></div>
+      <div class="bar"><label>WordPress</label><div class="progress"><div style="width: 70%"></div></div></div>
+      <div class="bar"><label>ML</label><div class="progress"><div style="width: 60%"></div></div></div>
+      <div class="bar"><label>Leadership</label><div class="progress"><div style="width: 90%"></div></div></div>
+    </div>
+  </section>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("active");
+    }
+
+    const links = document.querySelectorAll(".nav-links a");
+    const currentPage = window.location.pathname.split("/").pop();
+    links.forEach(link => {
+      const linkPage = link.getAttribute("href");
+      if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+        link.classList.add("active");
+      }
+    });
+  </script>
+</body>
+</html>
